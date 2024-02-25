@@ -3,12 +3,10 @@ import React from "react";
 const Navbar = () => {
   const navLinks = ["Services", "Our Works", "About Us", "Insights", "Contact"];
   return (
-    <div className=" fixed z-[999] w-full md:px-20 md:py-8 font-[NeueMontreal-Regular] flex justify-between items-center md:bg-transparent bg-violet-500 px-4 py-4">
+    <div className=" fixed top-0 z-[999] w-full md:px-20 md:py-8 font-['NeueMontreal_Regular'] flex justify-between items-center md:bg-transparent bg-violet-500 px-4 py-4">
       <div className="Logo">
         <svg
-          className="md:w-[72px] w-10"
-          width="72"
-          height="30"
+          className="md:w-[72px] w-8"
           viewBox="0 0 72 30"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -35,10 +33,10 @@ const Navbar = () => {
           ></path>
         </svg>
       </div>
-      <div className="Links flex md:gap-10 gap-2 ">
+      <div className="Links flex md:gap-10 gap-1  ">
         {navLinks.map((item, index) => (
           <a
-            key={item.name}
+            key={item}
             className={`md:text-lg text-md md:font-light capitalize ${
               index === 4 && "md:ml-32"
             }`}
