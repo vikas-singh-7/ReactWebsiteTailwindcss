@@ -1,5 +1,5 @@
 import React from "react";
-import { MdOutlineArrowOutward } from "react-icons/md";
+
 import { FaArrowUpLong } from "react-icons/fa6";
 
 const LandingPage = () => {
@@ -10,17 +10,24 @@ const LandingPage = () => {
   const Headings = ["We Create", "Eye-Opening", "Presentations"];
   return (
     <div className="w-full h-screen bg-zinc-900 pt-1 ">
-      {/* headings part one  */}
-      <div className="textStructure md:mt-52 mt-[7rem] md:px-20 px-6">
-        {Headings.map((item) => {
+      <div className="textStructure md:mt-50 mt-[7rem] md:px-20 px-6">
+        {Headings.map((item, index) => {
           return (
-            <div className="  masker " key={item}>
-              <h1
-                className="uppercase md:text-[7.5vw] text-[3rem] font-medium md:leading-[6vw] 
-              leading-[60px] tracking-tighter "
-              >
-                {item}
-              </h1>
+            <div className="masker" key={item}>
+              <div className=" w-fit flex items-end overflow-hidden">
+                {index === 1 && (
+                  <div
+                    className="md:w-[9vw] w-[5rem] mr-2 bg-green-500 md:h-[6vw]  rounded-md h-[3rem]
+                  relative "
+                  ></div>
+                )}
+                <h1
+                  className="uppercase flex items-center md:text-[7.5vw] text-[2.5rem] md:font-bold font-medium md:leading-[7vw] 
+              leading-[50px] tracking-tighter "
+                >
+                  {item}
+                </h1>
+              </div>
             </div>
           );
         })}

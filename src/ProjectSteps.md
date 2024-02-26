@@ -5,7 +5,9 @@
 <ol> 
 <li>
 <h1>Navbar first component</h1>
-
 </li>
+<li>
+<h1>
+Landing page completed </h1></li>
 
 </ol>
