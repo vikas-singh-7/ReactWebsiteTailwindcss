@@ -35,17 +35,17 @@ const LandingPage = () => {
       {/* subparas part 2 under border */}
       <div
         className="border-t-[1px] border-zinc-800 md:mt-32 mt-32 md:flex md:justify-between md:items-center md:px-20 py-5 px-5
-     grid grid-cols-12 gap-5 "
+     grid grid-cols-12 gap-9 "
       >
         {endparas.map((item) => (
           <p
-            className="text-md font-light leading-none md:tracking-tighter col-span-6  rounded-md md:rounded-none bg-violet-500 md:bg-transparent p-4 md:p-0"
+            className="text-md font-light leading-none md:tracking-tighter col-span-5  rounded-md md:rounded-none bg-violet-500 md:bg-transparent p-4 md:p-0"
             key={item}
           >
             {item}
           </p>
         ))}
-        <div className="start md:flex md:items-center gap-2 grid grid-cols-12 col-span-12">
+        <div className="start md:flex md:items-center md-gap-2 grid grid-cols-12 gap-4 col-span-12">
           <div className="px-5 py-2 border-[1px] rounded-full border-zinc-400 font-light text-md uppercase md:bg-transparent  bg-red-500 col-span-8">
             start the project
           </div>

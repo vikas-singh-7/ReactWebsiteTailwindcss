@@ -9,5 +9,8 @@
 <li>
 <h1>
 Landing page completed </h1></li>
+<li>
+<h1>
+marquee done but animation pending</h1></li>
 
 </ol>
