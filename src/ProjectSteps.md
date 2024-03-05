@@ -12,5 +12,14 @@ Landing page completed </h1></li>
 <li>
 <h1>
 marquee done but animation pending</h1></li>
+<li>
+<h1>
+About completed </h1></li>
+<li>
+<h1>
+eyes completed  </h1></li>
+<li>
+<h1>
+cards completed  </h1></li>
 
 </ol>

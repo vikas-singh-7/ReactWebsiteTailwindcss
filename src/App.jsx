@@ -3,6 +3,10 @@ import Navbar from "./components/Navbar";
 import LandingPage from "./components/LandingPage";
 import Marquee from "./components/Marquee";
 import About from "./components/About";
+import Eyes from "./components/Eyes";
+import FeaturedProjects from "./components/FeaturedProjects";
+import Cards from "./components/Cards";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -10,7 +14,11 @@ const App = () => {
       <Navbar />
       <LandingPage />
       <Marquee />
-      <About/>
+      <About />
+      <Eyes />
+      <FeaturedProjects />
+      <Cards />
+      <Footer/>
     </div>
   );
 };
