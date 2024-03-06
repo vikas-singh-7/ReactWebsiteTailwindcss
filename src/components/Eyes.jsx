@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Eyes = () => {
+const Eyes = ({ image }) => {
   const [rotateLeft, setRotateLeft] = useState(0);
   const [rotateRight, setRotateRight] = useState(0);
 
@@ -32,7 +32,12 @@ const Eyes = () => {
 
   return (
     <div className="eyes h-screen  w-full  overflow-hidden ">
-      <div className=" relative h-screen w-full bg-[url('https://ochi.design/wp-content/uploads/2022/05/Top-Viewbbcbv-1-1440x921.jpg')] bg-center bg-cover">
+      <div
+        data-scroll
+        data-scroll-speed="-.7"
+        className={` relative h-screen w-full  bg-center bg-cover `}
+        style={{ backgroundImage: `url(${image})` }}
+      >
         <div className="absolute flex gap-10 top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]">
           <div className="w-[15vw] h-[15vw] bg-zinc-100 rounded-full flex justify-center items-center">
             <div className=" relative w-2/3 h-2/3 bg-black rounded-full">

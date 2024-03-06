@@ -70,11 +70,12 @@ const Footer = () => {
           </div>
           <div className="dets flex flex-col gap-2 mt-12">
             {[
-              "202-1965",
-              "W4thAveVancouver",
-              " Canada",
-              "30 ChukarinaStLviv",
-              "Ukraine",
+              "Home",
+              "Services",
+              "Our work",
+              "About us",
+              "Insights",
+              "Contact us",
             ].map((item, index) => {
               return (
                 <span key={item}>

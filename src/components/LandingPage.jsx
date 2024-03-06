@@ -1,6 +1,7 @@
 import React from "react";
 
 import { FaArrowUpLong } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const LandingPage = () => {
   const endparas = [
@@ -9,17 +10,25 @@ const LandingPage = () => {
   ];
   const Headings = ["We Create", "Eye-Opening", "Presentations"];
   return (
-    <div className="w-full h-screen bg-zinc-900 pt-1 ">
+    <div
+      data-scroll
+      data
+      data-scroll-speed="-.4"
+      className="w-full relative h-screen bg-zinc-900 pt-1 "
+    >
       <div className="textStructure md:mt-50 mt-[7rem] md:px-20 px-6">
         {Headings.map((item, index) => {
           return (
             <div className="masker" key={item}>
-              <div className=" w-fit flex items-end overflow-hidden">
+              <div className=" w-fit flex items-end overflow-hidden ">
                 {index === 1 && (
-                  <div
-                    className="md:w-[9vw] w-[5rem] mr-2 bg-green-500 md:h-[6vw]  rounded-md h-[3rem]
+                  <motion.div
+                    initial={{ width: 0 }}
+                    animate={{ width: "9vw" }}
+                    transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
+                    className="md:w-[9vw] w-[5rem] mr-2 bg-green-500 md:h-[6vw]  rounded-md h-[3rem] bg-[url('https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg')] bg-cover
                   relative "
-                  ></div>
+                  ></motion.div>
                 )}
                 <h1
                   className="uppercase flex items-center md:text-[7.5vw] text-[2.5rem] md:font-bold font-medium md:leading-[7vw] 
@@ -39,7 +48,7 @@ const LandingPage = () => {
       >
         {endparas.map((item) => (
           <p
-            className="text-md font-light leading-none md:tracking-tighter col-span-5  rounded-md md:rounded-none bg-violet-500 md:bg-transparent p-4 md:p-0"
+            className="text-xl font-light leading-none md:tracking-tighter col-span-5  rounded-md md:rounded-none bg-violet-500 md:bg-transparent p-4 md:p-0"
             key={item}
           >
             {item}
@@ -56,6 +65,12 @@ const LandingPage = () => {
             </span>
           </div>
         </div>
+      </div>
+      <div className="left-[48vw] absolute mt-4 ">
+        {" "}
+        <h1 className="text-lg  animate-bounce animate-infinite">
+          Scroll down
+        </h1>
       </div>
     </div>
   );

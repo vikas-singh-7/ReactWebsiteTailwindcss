@@ -7,18 +7,30 @@ import Eyes from "./components/Eyes";
 import FeaturedProjects from "./components/FeaturedProjects";
 import Cards from "./components/Cards";
 import Footer from "./components/Footer";
+import LocomotiveScroll from "locomotive-scroll";
 
 const App = () => {
+  const locomotiveScroll = new LocomotiveScroll();
   return (
-    <div className="min-h-screen w-full text-white bg-zinc-900">
+    <div className="min-h-screen w-full text-white bg-zinc-900 ">
       <Navbar />
       <LandingPage />
       <Marquee />
       <About />
-      <Eyes />
+      <Eyes
+        image={
+          "https://ochi.design/wp-content/uploads/2022/05/Top-Viewbbcbv-1-1440x921.jpg"
+        }
+      />
       <FeaturedProjects />
       <Cards />
-      <Footer/>
+      <Eyes
+        image={
+          "https://images.pexels.com/photos/3280211/pexels-photo-3280211.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        }
+      />
+
+      <Footer />
     </div>
   );
 };

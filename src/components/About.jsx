@@ -3,7 +3,11 @@ import React from "react";
 import { GoDotFill } from "react-icons/go";
 const About = () => {
   return (
-    <div className="w-full py-20 bg-[#CDEA68] rounded-t-3xl text-black">
+    <div
+      data-scroll
+      data-scroll-speed="-.1"
+      className="w-full py-20 bg-[#CDEA68] rounded-t-3xl text-black"
+    >
       <h1 className=" text-[4.5vw] font-[NeueMontreal] leading-[4.5vw] p-3 tracking-tight">
         Ochi is a strategic partner for fast-grow­ing tech businesses that need
         to raise funds, sell prod­ucts, ex­plain com­plex ideas, and hire great

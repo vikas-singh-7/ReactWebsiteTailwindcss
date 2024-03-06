@@ -40,3 +40,8 @@ eyes compleetd
 .. done with features page and cards too
 
 ... working on Footer :P
+
+footer completed 
+
+
+... working on animations

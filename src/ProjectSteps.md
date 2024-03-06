@@ -21,5 +21,8 @@ eyes completed  </h1></li>
 <li>
 <h1>
 cards completed  </h1></li>
+<li>
+<h1>
+footerCompleted  </h1></li>
 
 </ol>

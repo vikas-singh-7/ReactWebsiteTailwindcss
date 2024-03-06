@@ -1,12 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const Navbar = () => {
   const navLinks = ["Services", "Our Works", "About Us", "Insights", "Contact"];
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      const isVisible =
+        prevScrollPos > currentScrollPos || currentScrollPos < 200;
+
+      setPrevScrollPos(currentScrollPos);
+      setVisible(isVisible);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos]);
+
   return (
-    <div className=" fixed top-0 z-[999] w-full md:px-20 md:py-8 font-['NeueMontreal_Regular'] flex justify-between items-center md:bg-transparent bg-violet-500 px-4 py-4">
+    <div
+      className={`fixed top-0 z-[999] w-full md:px-20 md:py-8 font-['NeueMontreal_Regular'] flex justify-between items-center md:bg-transparent bg-violet-500 px-4 py-4 ${
+        visible ? "" : "hidden"
+      } trasia backdrop-blur-sm`}
+    >
       <div className="Logo">
         <svg
-          className="md:w-[72px] w-8"
+          width="72"
+          height="30"
           viewBox="0 0 72 30"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +58,7 @@ const Navbar = () => {
           ></path>
         </svg>
       </div>
-      <div className="Links flex md:gap-10 gap-1  ">
+      <div className="Links flex md:gap-10 gap-1">
         {navLinks.map((item, index) => (
           <a
             key={item}
