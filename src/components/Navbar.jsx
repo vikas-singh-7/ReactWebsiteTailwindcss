@@ -15,6 +15,9 @@ const Navbar = () => {
       setVisible(isVisible);
     };
 
+    // Call handleScroll once to set initial state
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -24,14 +27,13 @@ const Navbar = () => {
 
   return (
     <div
-      className={`fixed top-0 z-[999] w-full md:px-20 md:py-8 font-['NeueMontreal_Regular'] flex justify-between items-center md:bg-transparent bg-violet-500 px-4 py-4 ${
-        visible ? "" : "hidden"
+      className={`fixed top-0 z-[999] w-full md:px-20 max-sm:py-4 max-sm:px-4 md:py-8 font-['NeueMontreal_Regular'] md:flex justify-between items-center bg-transparent  max-sm:grid max-sm:grid-cols-12 ${
+        visible ? "" : "md:hidden max-sm:hidden"
       } trasia backdrop-blur-sm`}
     >
-      <div className="Logo">
+      <div className="Logo max-sm:col-span-12">
         <svg
-          width="72"
-          height="30"
+          className="md:w-[72px] h-[30px] max-sm:w-[50px] max-sm:h-[30px]"
           viewBox="0 0 72 30"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -58,13 +60,14 @@ const Navbar = () => {
           ></path>
         </svg>
       </div>
-      <div className="Links flex md:gap-10 gap-1">
+      <div className="Links md:flex md:gap-10 max-sm:col-span-12   max-sm:flex max-sm:mt-5  max-sm:justify-between ">
         {navLinks.map((item, index) => (
           <a
             key={item}
-            className={`md:text-lg text-md md:font-light capitalize ${
+            className={`md:text-lg max-sm:text-lg  md:font-light  capitalize ${
               index === 4 && "md:ml-32"
             }`}
+            href={index === 4 ? "https://github.com/vikas-singh-7/" : "#"}
           >
             {item}
           </a>

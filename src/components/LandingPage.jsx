@@ -2,6 +2,7 @@ import React from "react";
 
 import { FaArrowUpLong } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import { FaArrowDownLong } from "react-icons/fa6";
 
 const LandingPage = () => {
   const endparas = [
@@ -14,25 +15,25 @@ const LandingPage = () => {
       data-scroll
       data
       data-scroll-speed="-.4"
-      className="w-full relative h-screen bg-zinc-900 pt-1 "
+      className="w-full relative h-screen bg-zinc-900 pt-1 flex flex-col"
     >
-      <div className="textStructure md:mt-50 mt-[7rem] md:px-20 px-6">
+      <div className="textStructure md:mt-50 mt-[7rem] md:px-20 max-sm:px-6">
         {Headings.map((item, index) => {
           return (
             <div className="masker" key={item}>
-              <div className=" w-fit flex items-end overflow-hidden ">
+              <div className=" w-full md:flex md:items-end overflow-hidden max-sm:grid  max-sm:grid-cols-12 ">
                 {index === 1 && (
                   <motion.div
                     initial={{ width: 0 }}
-                    animate={{ width: "9vw" }}
+                    animate={{ width: "9rem" }}
                     transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
-                    className="md:w-[9vw] w-[5rem] mr-2 bg-green-500 md:h-[6vw]  rounded-md h-[3rem] bg-[url('https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg')] bg-cover
-                  relative "
+                    className="md:w-[9vw] md:mb-2 w-[5rem] mr-2 bg-green-500 md:h-[6vw]  rounded-md h-[3rem] bg-[url('https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg')] bg-cover
+                  relative max:sm-col-span-12 max-sm:h-[4rem] "
                   ></motion.div>
                 )}
                 <h1
-                  className="uppercase flex items-center md:text-[7.5vw] text-[2.5rem] md:font-bold font-medium md:leading-[7vw] 
-              leading-[50px] tracking-tighter "
+                  className={`uppercase max-md:flex max-md:items-center md:text-[7.5vw] max-sm:text-[3rem] md:font-bold font-medium md:leading-[7vw] 
+              leading-[3rem] tracking-tighter  max-sm:col-span-12 py-2 `}
                 >
                   {item}
                 </h1>
@@ -40,25 +41,25 @@ const LandingPage = () => {
             </div>
           );
         })}
+        <div className="animate-pulse animate-infinite animate-ease-in md:hidden max-sm:text-2xl max-sm:mt-2 max-sm:h-[12vh] max-sm:rounded-lg max-sm:flex max-sm:px-2 max-sm:items-center max-sm:bg-orange-500">
+          <h1>"What would you do if you weren't afraid"</h1>
+        </div>
       </div>
       {/* subparas part 2 under border */}
-      <div
-        className="border-t-[1px] border-zinc-800 md:mt-32 mt-32 md:flex md:justify-between md:items-center md:px-20 py-5 px-5
-     grid grid-cols-12 gap-9 "
-      >
+      <div className="border-t-[1px]  border-zinc-800 md:mt-32 max-sm:mt-14 md:flex md:justify-between md:items-center md:px-20   max-sm:grid grid-cols-12 gap-5 max-sm:p-5">
         {endparas.map((item) => (
           <p
-            className="text-xl font-light leading-none md:tracking-tighter col-span-5  rounded-md md:rounded-none bg-violet-500 md:bg-transparent p-4 md:p-0"
+            className="md:text-xl md:font-light md:leading-none md:tracking-tighter max-sm:col-span-6  rounded-md md:rounded-none bg-violet-500 md:bg-transparent p-4  max-sm:text-lg md:p-4"
             key={item}
           >
             {item}
           </p>
         ))}
-        <div className="start md:flex md:items-center md-gap-2 grid grid-cols-12 gap-4 col-span-12">
-          <div className="px-5 py-2 border-[1px] rounded-full border-zinc-400 font-light text-md uppercase md:bg-transparent  bg-red-500 col-span-8">
+        <div className="start md:flex md:items-center md-gap-2  md:gap-4 max-sm:col-span-12 max-sm:grid max-sm:grid-cols-12  max-sm:gap-6 ">
+          <div className="px-5 py-2 border-[1px] rounded-full border-zinc-400 font-light text-md uppercase md:bg-transparent  bg-green-500 max-sm:text-black max-sm:font-semibold col-span-8 max-sm:p-3 max-sm:text-lg ">
             start the project
           </div>
-          <div className=" rounded-full flex items-center justify-center h-10 w-10  border-[1px]  border-zinc-500">
+          <div className=" rounded-full flex items-center justify-center md:h-10 md:w-10 max-sm:h-12 max-sm:w-12  border-[1px]  border-zinc-500 ">
             <span className="rotate-[45deg]">
               {" "}
               <FaArrowUpLong />
@@ -66,11 +67,14 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      <div className="left-[48vw] absolute mt-4 ">
+      <div className="md:left-[48vw] md:absolute md:mt-4 md:top-[90vh] max-sm:w-full max-sm:flex max-sm:flex-col gap-5 max-sm:justify-center max-sm:h-[18vh] max-sm:items-center  ">
         {" "}
-        <h1 className="text-lg  animate-bounce animate-infinite">
+        <h1 className="md:text-lg max-sm:text-2xl  animate-bounce animate-infinite">
           Scroll down
         </h1>
+        <span className="md:hidden max-sm:mt-6 max-sm:animate-pulse animate-infinite animate-ease-in">
+          <FaArrowDownLong size={30} />
+        </span>
       </div>
     </div>
   );

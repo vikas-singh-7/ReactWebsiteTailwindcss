@@ -22,15 +22,14 @@ const App = () => {
           "https://ochi.design/wp-content/uploads/2022/05/Top-Viewbbcbv-1-1440x921.jpg"
         }
       />
-      <FeaturedProjects />
-      <Cards />
-      <Eyes
+      {/* <FeaturedProjects /> */}
+      {/* <Cards /> */}
+      {/* <Eyes
         image={
           "https://images.pexels.com/photos/3280211/pexels-photo-3280211.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         }
-      />
-
-      <Footer />
+      /> */}
+      {/* <Footer />  */}
     </div>
   );
 };
