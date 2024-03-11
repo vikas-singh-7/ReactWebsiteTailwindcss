@@ -31,15 +31,15 @@ const Eyes = ({ image }) => {
   }, []);
 
   return (
-    <div className="eyes h-screen  w-full  overflow-hidden ">
+    <div className="eyes md:h-screen  w-full    overflow-hidden max-sm:hidden ">
       <div
         data-scroll
         data-scroll-speed="-.7"
-        className={` relative h-screen w-full  bg-center bg-cover `}
+        className={` relative md:h-screen w-full   bg-center bg-cover `}
         style={{ backgroundImage: `url(${image})` }}
       >
         <div className="absolute flex gap-10 top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]">
-          <div className="w-[15vw] h-[15vw] bg-zinc-100 rounded-full flex justify-center items-center">
+          <div className="w-[15vw] h-[15vw]  bg-zinc-100 rounded-full flex justify-center items-center">
             <div className=" relative w-2/3 h-2/3 bg-black rounded-full">
               <div
                 style={{
@@ -47,7 +47,7 @@ const Eyes = ({ image }) => {
                 }}
                 className=" absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]   w-full"
               >
-                <div className="w-6  bg-zinc-100 h-6 rounded-full"></div>
+                <div className="md:w-6 max-sm:w-4 bg-zinc-100 md:h-6 max-sm:h-4 md:rounded-full max-sm:rounded-full"></div>
               </div>
             </div>
           </div>
@@ -59,7 +59,7 @@ const Eyes = ({ image }) => {
                 }}
                 className=" w-full absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] "
               >
-                <div className="w-6  bg-zinc-100 h-6 rounded-full"></div>
+                <div className="w-6  bg-zinc-100 max-sm:w-4 h-6 rounded-full max-sm:h-4 md:rounded-full"></div>
               </div>
             </div>
           </div>
