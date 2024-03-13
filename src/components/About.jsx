@@ -22,12 +22,30 @@ const About = () => {
             Read More
             <div className="w-2 h-2 rounded-full bg-white"></div>
           </button>
+          <p className="text-xl py-3 font-semibold max-sm:hidden">
+            I know you are scared, scared of yourself, scared about "what will i
+            do in life" , scared about "I never make my parents happy" , scared
+            about "they dont deserve the kid like me" , scared about "they are
+            doing their best for me , and i am not giving them something back
+            from my side". But its okay , its okay to feel this way , this is
+            not your fault , because I know you dont want this, you are not this
+            , the surroundings , the environmental exposure you got , or the
+            things you feel has made you to think like this.Remember if god sent
+            you on 🌎 , then God must have a purpose , a good purpose that even
+            God himslef can not do.So you were his choice to make that purpose
+            done ! . Beleive in God , Give yourself to him , put your soul ,
+            body all in front of him,and tell him that now you have to become
+            the "Sails Of My Ship". Now i will be flowen to the direction ,
+            where you will take me.{" "}
+            <span className="text-xl text-violet-800">
+              Bhagwaan Pe Bharosa Rakho Sab Sahi Hoga
+            </span>
+          </p>
         </div>
         <div
-          className="md:w-1/2 md:h-[70vh] rounded-xl bg-cover bg-no-repeat max-sm:grid-col-span-6 max-sm:bg-teal-500 max-sm:col-span-8 max-sm:bg-[url('https://wallpapers.com/images/high/4k-bmw-e9-uuw2pbtdury3rjzz.webp')] max-sm:bg-center"
+          className="md:w-1/2 md:h-[70vh] rounded-xl bg-cover bg-center bg-no-repeat max-sm:grid-col-span-6 max-sm:bg-teal-500 max-sm:col-span-8 max-sm:bg-[url('https://wallpapers.com/images/high/4k-bmw-e9-uuw2pbtdury3rjzz.webp')] max-sm:bg-center max-sm:bg-cover"
           style={{
-            backgroundImage:
-              "url('https://wallpapers.com/images/high/4k-bmw-e9-uuw2pbtdury3rjzz.webp')",
+            backgroundImage: "url('TRUST.jpg')",
           }}
         ></div>
       </div>

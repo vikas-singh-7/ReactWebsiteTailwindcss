@@ -3,6 +3,7 @@ import React from "react";
 import { FaArrowUpLong } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { FaArrowDownLong } from "react-icons/fa6";
+import Quotes from "./Quotes";
 
 const LandingPage = () => {
   const endparas = [
@@ -13,7 +14,7 @@ const LandingPage = () => {
   return (
     <div
       data-scroll
-      data
+      data="true"
       data-scroll-speed="-.4"
       className="w-full relative h-screen bg-zinc-900 pt-1 flex flex-col"
     >
@@ -27,7 +28,7 @@ const LandingPage = () => {
                     initial={{ width: 0 }}
                     animate={{ width: "9rem" }}
                     transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
-                    className="md:w-[9vw] md:mb-2 w-[5rem] mr-2 bg-green-500 md:h-[6vw]  rounded-md h-[3rem] bg-[url('https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg')] bg-cover
+                    className="md:w-[9vw] md:mb-2 w-[5rem] mr-2 bg-green-500 md:h-[6vw]  rounded-md h-[3rem] bg-[url('content-image01.jpg')] bg-cover
                   relative max:sm-col-span-12 max-sm:h-[4rem] "
                   ></motion.div>
                 )}
@@ -41,9 +42,7 @@ const LandingPage = () => {
             </div>
           );
         })}
-        <div className="animate-pulse animate-infinite animate-ease-in md:hidden max-sm:text-2xl max-sm:mt-2 max-sm:h-[12vh] max-sm:rounded-lg max-sm:flex max-sm:px-2 max-sm:items-center max-sm:bg-orange-500">
-          <h1>"What would you do if you weren't afraid"</h1>
-        </div>
+       <Quotes quote={"What would you do if you weren't afraid"}/>
       </div>
       {/* subparas part 2 under border */}
       <div className="border-t-[1px]  border-zinc-800 md:mt-32 max-sm:mt-14 md:flex md:justify-between md:items-center md:px-20   max-sm:grid grid-cols-12 gap-5 max-sm:p-5">

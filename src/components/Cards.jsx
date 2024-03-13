@@ -3,11 +3,11 @@ import CardsChild from "./CardsChild";
 
 const Cards = () => {
   return (
-    <div className="card flex  gap-5 items-center container  h-screen w-full px-10 py-10 ">
-      <div className="relative greencard h-[55vh] w-[50vw] bg-[#004D43] text-[#CDEA68] rounded-md flex justify-center items-center ">
-        <div className="Logo">
+    <div className="card flex  max-sm:grid max-sm:grid-cols-12 gap-5 items-center container  h-screen w-full md:p-10 max-sm:p-5  max-sm:-mt-[70px] ">
+      <div className="relative greencard md:h-[55vh] md:w-[50vw] max-sm:h-[45vh] max-sm:w-[full] bg-[#004D43] text-[#CDEA68] rounded-md flex justify-center   items-center max-sm:col-span-12 max-sm:order-3">
+        <div className="Logo ">
           <svg
-            className="md:w-[10rem] w-8"
+            className="md:w-[10rem] max-sm:w-20"
             viewBox="0 0 72 30"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -38,14 +38,20 @@ const Cards = () => {
           2019-2023
         </div>
       </div>
-      <CardsChild
-        image={"https://ochi.design/wp-content/uploads/2022/04/logo002.svg"}
-        text={"RATING 5.0 ON CLUTCH"}
-      />
-      <CardsChild
-        image={"https://ochi.design/wp-content/uploads/2022/04/logo003.png"}
-        text={"BUSINESS BOOTCAMP ALUMINI"}
-      />
+
+      <div className="max-sm:col-span-12 ">
+        {" "}
+        <CardsChild
+          image={"https://ochi.design/wp-content/uploads/2022/04/logo002.svg"}
+          text={"RATING 5.0 ON CLUTCH"}
+        />
+      </div>
+      <div className="max-sm:col-span-12 ">
+        <CardsChild
+          image={"https://ochi.design/wp-content/uploads/2022/04/logo003.png"}
+          text={"BUSINESS BOOTCAMP ALUMINI"}
+        />
+      </div>
     </div>
   );
 };

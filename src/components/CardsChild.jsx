@@ -1,14 +1,13 @@
 import React from "react";
 import Button from "./Button";
 
-const CardsChild = ({ image ,text}) => {
+const CardsChild = ({ image, text }) => {
   return (
-    <button>
-      <div className="h-[55vh] relative flex  justify-center items-center rounded-xl w-[22vw] bg-[#212121]">
-        <img src={image} alt="" />
-        <Button text={text} />
-      </div>
-    </button>
+    <div className="md:h-[55vh]   max-sm:h-[20vh] max-sm:w-[90vw] relative flex  justify-center items-center rounded-xl md:w-[22vw] bg-[#212121]   max-sm:overflow-hidden">
+      <img src={image} alt="" className="max-sm:w-[100px] max-h-[100px]" />
+
+      <Button text={text} />
+    </div>
   );
 };
 

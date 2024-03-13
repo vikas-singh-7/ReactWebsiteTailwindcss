@@ -1,12 +1,30 @@
 import React from "react";
 
 const Footer = () => {
+  const links = [
+    {
+      name: "instagram",
+      link: "https://www.instagram.com/rajputvikas_1?utm_source=qr&igsh=NTFmMGw3bDM3aTZm",
+    },
+    {
+      name: "Github",
+      link: "https://github.com/vikas-singh-7",
+    },
+    {
+      name: "Linkedin",
+      link: "https://www.linkedin.com/in/vikas-singh-a7229626b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+  ];
   return (
-    <div className="w-full h-screen bg-zinc-900 p-20 rounded-md flex gap-5 ">
+    <div className="w-full md:h-screen bg-zinc-900 md:p-20 max-sm:p-5 rounded-md max-sm:h-[70vh] flex md:gap-5 max-sm:flex max-sm:justify-center max-sm:items-center ">
       <div className="h1 font-[NeueMontreal] h-full w-1/2 flex flex-col justify-between ">
         <div className="headings leading-none ">
-          <h1 className="text-[7vw] font-semibold">EYE-</h1>
-          <h1 className="text-[7vw] font-semibold">OPENING</h1>
+          <h1 className="md:text-[7vw] max-sm:text-[2rem] font-semibold">
+            EYE-
+          </h1>
+          <h1 className="md:text-[7vw] max-sm:text-[2rem] font-semibold">
+            OPENING
+          </h1>
         </div>
         <svg
           width="72"
@@ -38,37 +56,35 @@ const Footer = () => {
         </svg>
       </div>
       <div className="heading2 w-1/2 h-full">
-        <h1 className="uppercase text-[6vw] font-semibold ">Presentations</h1>
+        <h1 className="uppercase md:text-[6vw] max-sm:text-[1.5rem] font-semibold ">
+          Presentations
+        </h1>
 
-        <div className="dets flex flex-col  gap-2 ">
-          {["instagram", "behance", "facebook", "linkedin"].map(
-            (item, index) => {
-              return (
-                <span key={item}>
-                  <a href="#">{item}</a>
-                </span>
-              );
-            }
-          )}
+        <div className="dets flex flex-col mt-4 gap-2 ">
+          {links.map((item, index) => {
+            return (
+              <span key={item.name}>
+                <a href={item.link} target="blank">
+                  {item.name}
+                </a>
+              </span>
+            );
+          })}
         </div>
 
         <div className="flex justify-between">
           <div className="dets flex flex-col gap-2 mt-12">
-            {[
-              "202-1965",
-              "W4thAveVancouver",
-              " Canada",
-              "30 ChukarinaStLviv",
-              "Ukraine",
-            ].map((item, index) => {
-              return (
-                <span key={item}>
-                  <a href="#">{item}</a>
-                </span>
-              );
-            })}
+            {["Lehroon", "Dunera", " Mohali", "Chandigarh", "India"].map(
+              (item, index) => {
+                return (
+                  <span key={item}>
+                    <a href="#">{item}</a>
+                  </span>
+                );
+              }
+            )}
           </div>
-          <div className="dets flex flex-col gap-2 mt-12">
+          <div className="dets flex flex-col gap-2 mt-12 max-sm:hidden">
             {[
               "Home",
               "Services",
