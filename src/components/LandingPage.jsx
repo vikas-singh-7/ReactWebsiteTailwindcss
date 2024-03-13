@@ -28,7 +28,7 @@ const LandingPage = () => {
                     initial={{ width: 0 }}
                     animate={{ width: "9rem" }}
                     transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
-                    className="md:w-[9vw] md:mb-2 w-[5rem] mr-2 bg-green-500 md:h-[6vw]  rounded-md h-[3rem] bg-[url('content-image01.jpg')] bg-cover
+                    className="md:w-[9vw] md:mb-2 w-[5rem] mr-2 bg-green-500 md:h-[6vw]  rounded-md h-[3rem] bg-[url('background.jpg')] bg-cover
                   relative max:sm-col-span-12 max-sm:h-[4rem] "
                   ></motion.div>
                 )}
