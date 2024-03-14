@@ -39,7 +39,7 @@ const Cards = () => {
         </div>
       </div>
 
-      <div className="max-sm:col-span-12 ">
+      <div className="max-sm:col-span-12 max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center">
         {" "}
         <CardsChild
           image={"https://ochi.design/wp-content/uploads/2022/04/logo002.svg"}

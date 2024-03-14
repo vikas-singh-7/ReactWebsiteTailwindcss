@@ -29,12 +29,12 @@ const LandingPage = () => {
                     animate={{ width: "9rem" }}
                     transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
                     className="md:w-[9vw] md:mb-2 w-[5rem] mr-2 bg-green-500 md:h-[6vw]  rounded-md h-[3rem] bg-[url('background.jpg')] bg-cover
-                  relative max:sm-col-span-12 max-sm:h-[4rem] "
+                    relative max:sm-col-span-12 max-sm:h-[4rem] "
                   ></motion.div>
                 )}
                 <h1
                   className={`uppercase max-md:flex max-md:items-center md:text-[7.5vw] max-sm:text-[3rem] md:font-bold font-medium md:leading-[7vw] 
-              leading-[3rem] tracking-tighter  max-sm:col-span-12 py-2 `}
+                leading-[3rem] tracking-tighter  max-sm:col-span-12 py-2 `}
                 >
                   {item}
                 </h1>
@@ -42,7 +42,7 @@ const LandingPage = () => {
             </div>
           );
         })}
-       <Quotes quote={"What would you do if you weren't afraid"}/>
+        <Quotes quote={"What would you do if you weren't afraid"} />
       </div>
       {/* subparas part 2 under border */}
       <div className="border-t-[1px]  border-zinc-800 md:mt-32 max-sm:mt-14 md:flex md:justify-between md:items-center md:px-20   max-sm:grid grid-cols-12 gap-5 max-sm:p-5">
